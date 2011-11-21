@@ -1,5 +1,5 @@
 === Hyper Admins ===
-Contributors: scribu, AppThemes
+Contributors: scribu, appthemes
 Tags: multisite, network, administration, themes, users
 Requires at least: 3.2
 Tested up to: 3.3
