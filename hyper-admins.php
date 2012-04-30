@@ -6,8 +6,6 @@ Network: true
 Author: scribu
 Plugin URI: http://wordpress.org/extend/plugins/hyper-admins/
 Version: 1.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 if ( !is_multisite() )
