@@ -8,15 +8,17 @@ Plugin URI: http://wordpress.org/extend/plugins/hyper-admins/
 Version: 1.0
 */
 
-if ( !is_multisite() )
+if ( ! is_multisite() ) {
 	return;
+}
 
-add_filter( 'allowed_themes', 'all_the_themes' );
+add_filter( 'option_allowedthemes', 'all_the_themes' );
 add_action( 'admin_bar_init', 'all_the_sites' );
 
 function all_the_sites() {
-	if ( ! is_super_admin() )
+	if ( ! is_super_admin() ) {
 		return;
+	}
 
 	// Get all blog ids
 	global $wpdb;
@@ -55,12 +57,13 @@ function all_the_sites() {
 
 // All sites have access to all themes
 function all_the_themes( $themes ) {
-	if ( !is_super_admin() )
+	if ( ! is_super_admin() ) {
 		return $themes;
+	}
 
 	$allowed = array();
-	foreach ( get_themes() as $theme ) {
-		$allowed[ esc_html( $theme['Stylesheet'] ) ] = true;
+	foreach ( wp_get_themes() as $theme ) {
+		$allowed[ $theme->get_stylesheet() ] = true;
 	}
 
 	return $allowed;
