@@ -5,7 +5,7 @@ Description: Show all sites in admin bar; show all themes in theme page. Only fo
 Network: true
 Author: scribu
 Plugin URI: http://wordpress.org/extend/plugins/hyper-admins/
-Version: 1.0
+Version: 1.1
 */
 
 if ( ! is_multisite() ) {
