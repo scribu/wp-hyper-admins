@@ -12,7 +12,7 @@ if ( ! is_multisite() ) {
 	return;
 }
 
-add_filter( 'allowed_themes', 'all_the_themes' );
+add_filter( 'option_allowedthemes', 'all_the_themes' );
 add_action( 'admin_bar_init', 'all_the_sites' );
 
 function all_the_sites() {
